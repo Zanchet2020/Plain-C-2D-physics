@@ -1,5 +1,7 @@
 #include "doUpdate.h"
 
+#include <stdio.h>
+
 #define TIME_SUB_SAMPLES 5
 
 void doUpdate(gameData * game){

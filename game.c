@@ -1,6 +1,8 @@
 #include "game.h"
 #include "exceptions.h"
 
+#include <string.h>
+
 #define BALL_VECTOR_INIT_SIZE 500
 #define LINE_VECTOR_INIT_SIZE 100
 
@@ -37,7 +39,7 @@ void setupGame(gameData * game){
     game->ballToThrow = NULL;
     game->selectedLine = NULL;
 
-    int defaultRadius = 50;
+    //int defaultRadius = 50;
 }
 
 void pushCollidedBalls(gameData * game, ball_t * a, ball_t * b){
@@ -90,7 +92,7 @@ void newBall(gameData * game, float x, float y, float rad, float mass, color_t c
 }
 
 void removeBall(gameData * game, unsigned int index){
-    for(index; index < game->ballAmout; index++){
+    for(; index < game->ballAmout; index++){
         game->balls[index] = game->balls[index+1];
     }
 }

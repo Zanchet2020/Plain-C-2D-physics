@@ -98,5 +98,5 @@ bool Ball2Ball(ball_t a, ball_t b){
 }
 
 bool Ball2Line(ball_t ball, line_t line){
-
+  return false;
 }

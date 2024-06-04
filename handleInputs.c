@@ -53,7 +53,7 @@ void handleInputs(gameData * game)
 {
 
     static SDL_Event event;
-    int entrada = -1;
+    //int entrada = -1;
 
     while(SDL_PollEvent(&event))
     {

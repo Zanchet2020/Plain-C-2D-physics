@@ -50,7 +50,8 @@ void endGame(gameData * game);
 void newBall(gameData * game, float x, float y, float rad, float mass, color_t col);
 void newLine(gameData * game, float x0, float y0, float x1, float y1, float radius, color_t col);
 void pushCollidedBalls(gameData * game, ball_t * a, ball_t * b);
-void ClearBallCollisions(gameData * game);
+void ClearBallCollisions(gameData *game);
+void removeBall(gameData*, unsigned int index);
 
 
 #endif // GAME_H_INCLUDED

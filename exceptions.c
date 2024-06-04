@@ -27,30 +27,30 @@ void throwException(gameData * game, unsigned int type){
             endGame(game);
             break;
         }
-        case _HEAPBADBEGIN:
-        {
-            printf("Erro: _HEAPBADBEGIN");
-            endGame(game);
-            break;
-        }
-        case _HEAPBADNODE:
-        {
-            printf("Erro: _HEAPBADNODE");
-            endGame(game);
-            break;
-        }
-        case _HEAPBADPTR:
-        {
-            printf("Erro: _HEAPBADPTR");
-            endGame(game);
-            break;
-        }
-        case _HEAPEMPTY:
-        {
-            printf("Erro: _HEAPEMPTY");
-            endGame(game);
-            break;
-        }
+        /* case _HEAPBADBEGIN: */
+        /* { */
+        /*     printf("Erro: _HEAPBADBEGIN"); */
+        /*     endGame(game); */
+        /*     break; */
+        /* } */
+        /* case _HEAPBADNODE: */
+        /* { */
+        /*     printf("Erro: _HEAPBADNODE"); */
+        /*     endGame(game); */
+        /*     break; */
+        /* } */
+        /* case _HEAPBADPTR: */
+        /* { */
+        /*     printf("Erro: _HEAPBADPTR"); */
+        /*     endGame(game); */
+        /*     break; */
+        /* } */
+        /* case _HEAPEMPTY: */
+        /* { */
+        /*     printf("Erro: _HEAPEMPTY"); */
+        /*     endGame(game); */
+        /*     break; */
+        /* } */
     }
     exit(type);
 }
