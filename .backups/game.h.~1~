@@ -1,9 +1,7 @@
 #ifndef GAME_H_INCLUDED
 #define GAME_H_INCLUDED
-// #include <SDL.h>
-#include <raylib.h>
+#include <SDL.h>
 #include <stdlib.h>
-#include <stdint.h>
 #include "objects.h"
 
 #define WINDOWSIZE_X 1920
@@ -12,8 +10,12 @@
 // Estrutura com estado interno da aplicação
 typedef struct gameData
 {
-    uint64_t lastTime;
-    uint64_t currentTime;
+    SDL_Window *window;
+    SDL_Texture *texture;
+    SDL_Renderer *renderer;
+
+    Uint64 lastTime;
+    Uint64 currentTime;
     double deltaTime;
 
     void * buffer;
@@ -48,8 +50,7 @@ void endGame(gameData * game);
 void newBall(gameData * game, float x, float y, float rad, float mass, color_t col);
 void newLine(gameData * game, float x0, float y0, float x1, float y1, float radius, color_t col);
 void pushCollidedBalls(gameData * game, ball_t * a, ball_t * b);
-void ClearBallCollisions(gameData *game);
-void removeBall(gameData*, unsigned int index);
+void ClearBallCollisions(gameData * game);
 
 
 #endif // GAME_H_INCLUDED

@@ -1,9 +1,7 @@
 #ifndef GAME_H_INCLUDED
 #define GAME_H_INCLUDED
-// #include <SDL.h>
-#include <raylib.h>
+#include <SDL.h>
 #include <stdlib.h>
-#include <stdint.h>
 #include "objects.h"
 
 #define WINDOWSIZE_X 1920
@@ -12,8 +10,12 @@
 // Estrutura com estado interno da aplicação
 typedef struct gameData
 {
-    uint64_t lastTime;
-    uint64_t currentTime;
+    SDL_Window *window;
+    SDL_Texture *texture;
+    SDL_Renderer *renderer;
+
+    Uint64 lastTime;
+    Uint64 currentTime;
     double deltaTime;
 
     void * buffer;

@@ -10,7 +10,7 @@ vec2 vectorize(float x, float y){
     return vect;
 }
 
-color_t colorize(uint8_t R, uint8_t G, uint8_t B, uint8_t A){
+color_t colorize(Uint8 R, Uint8 G, Uint8 B, Uint8 A){
     color_t color;
     color.R = R;
     color.G = G;

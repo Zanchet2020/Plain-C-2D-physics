@@ -1,4 +1,3 @@
-#include <math.h>
 #include "graphics.h"
 #include "game.h"
 #include "sound.h"
@@ -9,34 +8,40 @@
 #include "drawUtilities.h"
 #include "exceptions.h"
 
+#include <raylib.h>
+#include <raymath.h>
+
 int main(int argc, char *argv[])
 {
     // estrutura com dados internos da aplicacao
-    gameData game;
+  gameData game;
 
-    initScreen(&game);
+  initScreen(&game);
 
-    setupGame(&game);
+  setupGame(&game);
 
-    game.lastTime = SDL_GetPerformanceCounter();
-	while(1)
+  //game.lastTime = SDL_GetPerformanceCounter();
+    while(!WindowShouldClose())
     {
+      BeginDrawing();
+      ClearBackground(RAYWHITE);
+      DrawText("My first working window!!", 200, 300, 20, LIGHTGRAY);
+      EndDrawing();
 
-        // Gerencia entradas do usu�rio pelo teclado
-        //printf("travou no handle inputs\n");
-        handleInputs(&game);
 
-        //printf("travou no doUpdate\n");
-        // Gerencia logica da aplicacao
-        doUpdate(&game);
+      handleInputs(&game);
 
-        //printf("travou no drawScreen\n");
-        // Atualiza a tela
-        drawScreen(&game);
-        game.ammoutOfCollisions = 0;
+
+
+        //doUpdate(&game);
+
+
+
+        //drawScreen(&game);
+        //game.ammoutOfCollisions = 0;
     }
-
-    endGame(&game);
+    CloseWindow();
+	//endGame(&game);
 
 	return 0;
 }

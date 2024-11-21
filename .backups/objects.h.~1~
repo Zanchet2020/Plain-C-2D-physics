@@ -1,15 +1,14 @@
 #ifndef OBJECTS_H_INCLUDE
 #define OBJECTS_H_INCLUDE
-//#include <cstdint>
 #include <stdbool.h>
 #include <math.h>
-//#include <SDL.h>
+#include <SDL.h>
 #include <stdarg.h>
-#include <stdint.h>
+
 
 typedef struct color_s
 {
-    uint8_t R, G, B, A;
+    Uint8 R, G, B, A;
 }color_t;
 
 
@@ -59,7 +58,7 @@ vec2 scalar(float e, vec2 vec);
 
 vec2 divScalar(float e, vec2 vec);
 
-color_t colorize(uint8_t, uint8_t, uint8_t, uint8_t);
+color_t colorize(Uint8 R, Uint8 G, Uint8 B, Uint8 A);
 
 bool Ball2Line(ball_t ball, line_t line);
 

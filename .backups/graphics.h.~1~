@@ -1,8 +1,6 @@
 #ifndef GRAPHICS_H_INCLUDED
 #define GRAPHICS_H_INCLUDED
-
-#include <raylib.h>
-
+#include <SDL.h>
 #include "game.h"
 #include "exceptions.h"
 

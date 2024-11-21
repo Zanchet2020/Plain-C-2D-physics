@@ -23,7 +23,7 @@ void putPixel(gameData * game, int x, int y, color_t col){
 
 
 void drawLine(gameData * game, vec2 start, vec2 end, color_t col){
-  //    float temp = 0;
+    float temp = 0;
     int x, y, x0, x1, y0, y1, dx, dy, incline, D;
 
     if(fabs(end.y - start.y) < fabs(end.x - start.x)){

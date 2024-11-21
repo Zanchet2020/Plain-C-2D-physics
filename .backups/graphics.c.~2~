@@ -1,11 +1,15 @@
 #include "graphics.h"
-#include "game.h"
+#include "game.h"b
 
 void initScreen(gameData *game) {
   InitWindow(WINDOWSIZE_X, WINDOWSIZE_Y, "Teste");
+  
 }
 
 void endScreen(gameData *game) {
   // libera memoria e encerra a aplicacao grafica
-  CloseWindow();
+
+  SDL_DestroyRenderer(game->renderer);
+  SDL_DestroyWindow(game->window);
+  SDL_Quit();
 }
