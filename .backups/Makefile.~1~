@@ -1,4 +1,0 @@
-
-
-main:
-	cc -o main - *.c
