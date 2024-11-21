@@ -6,7 +6,7 @@
 
 void doUpdate(gameData * game){
     //update delta tempo
-    static float segundo;
+    //static float segundo;
     updateClock(game);
     unsigned int i, j;
     float dist;
@@ -107,13 +107,13 @@ void doUpdate(gameData * game){
     }
 
     game->fps++;
-    segundo += game->deltaTime;
-    if(segundo >= 1){
+//    segundo += game->deltaTime;
+/*    if(segundo >= 1){
         segundo = 0;
         system("cls");
         printf("fps: %d\n", game->fps);
         game->fps = 0;
 
     }
+*/
 }
-
